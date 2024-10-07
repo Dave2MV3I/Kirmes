@@ -1,6 +1,10 @@
 public class MainControl {
-    public static void main(String[] args) {}
-    new MainColtrol();
+    public static void main(String[] args) {
+
+        new MainControl();
+
+    }
+
 
     // Attribute
 
