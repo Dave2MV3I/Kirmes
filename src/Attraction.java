@@ -1,7 +1,7 @@
 public class Attraction {
     // Attribute
-        String description;
-        int price;
+        private String description;
+        private int price;
 
     // Referenzen
 

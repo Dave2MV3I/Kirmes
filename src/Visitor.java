@@ -1,7 +1,7 @@
 public class Visitor {
     // Attribute
-        String name;
-        int money;
+        private String name;
+        private int money;
 
     // Referenzen
         private Attraction currentlyVisiting;
@@ -15,7 +15,8 @@ public class Visitor {
     // Methoden
         public void visitAttraction(Attraction attraction){
             currentlyVisiting = attraction; // Muss das nötige Geld bezahlen
-            money = money - attraction.getPrice();
+            money = money - currentlyVisiting.getPrice();
+            // ODER mit durch Parameter auf Objekt zugreifen: money = money - attraction.getPrice();
         }
         public int getState(){
             return money;
