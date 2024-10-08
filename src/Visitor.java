@@ -4,6 +4,7 @@ public class Visitor {
         int money;
 
     // Referenzen
+        private Attraction currentlyVisiting;
 
     // Konstruktor
         public Visitor(String name, int money){
@@ -12,4 +13,11 @@ public class Visitor {
         }
 
     // Methoden
+        public void visitAttraction(Attraction attraction){
+            currentlyVisiting = attraction; // Muss das nötige Geld bezahlen
+            money = money - attraction.getPrice();
+        }
+        public int getState(){
+            return money;
+        }
 }

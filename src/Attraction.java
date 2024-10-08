@@ -12,4 +12,5 @@ public class Attraction {
         }
 
     // Methoden
+        public int getPrice(){ return price; }
 }
