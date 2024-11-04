@@ -31,9 +31,17 @@ public class MainControl {
             visitor1.visitAttraction(attraction3);
             visitor2.visitAttraction(attraction2);
             visitor3.visitAttraction(attraction1);
+
+            getPossibleAttractions(visitor1);
         }
 
         public void printState(){
             System.out.println("Besucher 1, 2 und 3 haben " + visitor1.getState() + " €, " + visitor2.getState() + " €, " + visitor3.getState() + " € übrig.");
+        }
+
+        private void getPossibleAttractions(Visitor visitor){
+            if ( visitor.getMoney() >= attraction1.getPrice()) System.out.println(visitor.getName()+" kann Attraktion "+attraction1.getName()+ " besuchen.");
+            if ( visitor.getMoney() >= attraction2.getPrice()) System.out.println(visitor.getName()+" kann Attraktion "+attraction2.getName()+ " besuchen.");
+            if ( visitor.getMoney() >= attraction3.getPrice()) System.out.println(visitor.getName()+" kann Attraktion "+attraction3.getName()+ " besuchen.");
         }
 }

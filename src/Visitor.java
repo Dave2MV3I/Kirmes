@@ -14,11 +14,25 @@ public class Visitor {
 
     // Methoden
         public void visitAttraction(Attraction attraction){
-            currentlyVisiting = attraction; // Muss das nötige Geld bezahlen
-            money = money - currentlyVisiting.getPrice();
-            // ODER mit durch Parameter auf Objekt zugreifen: money = money - attraction.getPrice();
+            attraction.visitAttraction(this);
         }
         public int getState(){
             return money;
         }
+
+    public int getMoney() {
+            return money;
+    }
+
+    public String getName() {
+        return name;
+        }
+
+    public void setMoney(int i) {
+            money = i;
+    }
+
+    public void setAttraction(Attraction attraction) {
+            currentlyVisiting = attraction;
+    }
 }

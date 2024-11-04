@@ -13,4 +13,16 @@ public class Attraction {
 
     // Methoden
         public int getPrice(){ return price; }
+
+    public void visitAttraction(Visitor v){
+            if ( v.getMoney() >= price) {
+                // DANN
+                v.setMoney(v.getMoney()-price);
+                v.setAttraction(this);
+            }
+    }
+
+    public String getName() {
+            return description;
+    }
 }
